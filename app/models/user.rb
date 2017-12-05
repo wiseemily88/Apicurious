@@ -5,7 +5,6 @@ class User < ApplicationRecord
       user.uid                = auth_info.uid
       user.login              = auth_info.extra.raw_info.login
       user.token              = auth_info.credentials.token
-      user.save
     end
   end
 end
