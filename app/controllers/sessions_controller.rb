@@ -1,4 +1,6 @@
 class SessionsController <ApplicationController
-  def index
+  def create
+     binding.pry
+    render text: request.env["omniauth.auth"]
   end
-end    
+end
