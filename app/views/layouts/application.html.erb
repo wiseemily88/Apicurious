@@ -25,7 +25,13 @@
             <li ><a href="#">Issues </a></li>
             <li><a href="#">Marketplace </a></li>
             <li><a href="#">Explore </a></li>
+            <% if current_user %>
+              Hello, <%=current_user.login %>
+            <li><a href="/logout">Logout</a></li>
+            <% else %>
             <li><a href="/auth/github">Login</a></li>
+            <%end %>
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Profile <span class="caret"></span></a>
               <ul class="dropdown-menu">
