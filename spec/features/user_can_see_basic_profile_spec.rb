@@ -1,10 +1,10 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'user can see view basic account information' do
-  scenario 'user submits valid login credentials' do
+feature "user can see view basic account information" do
+  scenario "user submits valid login credentials" do
 
 
-  visit '/'
+  visit '/profile'
 
     within(".left-float-profile") do
       expect(page).to have_selector(".profile_image")
