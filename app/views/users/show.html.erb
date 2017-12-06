@@ -1,0 +1,13 @@
+
+
+<div class="left-float-profile">
+    <div class="profile_image"><%=@github_user.image %></div>
+    <div class="p-login-name"><%=@github_user.login %></div>
+</div>
+
+<div class="body-nav-bar">
+    <div class="repos"><%=@github_user.repos.count %></div>
+    <div class="stars"><%=@github_user.stars %></div>
+    <div class="following"><%=@github_user.following %></div>
+    <div class="followers"><%=@github_user.followers %></div>
+</div>
