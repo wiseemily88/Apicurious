@@ -20,4 +20,9 @@ class GithubService
     attrs = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def starred_repos_info
+    response = @conn.get("/users/#{@user.login}/starred")
+    attrs = JSON.parse(response.body, symbolize_names: true)
+  end
+
 end

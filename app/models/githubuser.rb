@@ -12,22 +12,23 @@ class Githubuser
   end
 
   def user_repos
-
     github.repos_info.map do |repo|
       Repos.new(repo)
     end
-    # github = GithubService.new(current_user)
-    # github.repos_info.map do |repo|
-    #   Repos.new(repo)
-    # end
   end
+
+  def user_starred_repos
+    github.starred_repos_info.map do |repo|
+      Repos.new(repo)
+    end
+  end
+  
 
   private
 
   def github
     @github ||= GithubService.new(@user)
   end
-
 
 
 end
