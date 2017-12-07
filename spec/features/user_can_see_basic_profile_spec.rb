@@ -7,7 +7,6 @@ feature "user can see view basic account information" do
 
   allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-binding.pry
 
   visit '/profile'
 
