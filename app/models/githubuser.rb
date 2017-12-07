@@ -1,32 +1,33 @@
 require './app/models/repos'
 
 class Githubuser
-  attr_reader :image, :login
+  attr_reader :user
 
-  def initialize(attrs = {})
-    @image = attrs[:avatar_url]
-    @login = attrs[:login]
+  def initialize (user)
+    @user = user
   end
 
-  def self.create_profile(current_user)
-    user = current_user
-    github = GithubService.new(user)
-    user_info = github.profile_info
-    Githubuser.new(user_info)
+  def retrieve_image
+   github.profile_info[:avatar_url]
   end
 
-  def user_repos(current_user)
-    github = GithubService.new(current_user)
+  def user_repos
+
     github.repos_info.map do |repo|
       Repos.new(repo)
     end
-
-
+    # github = GithubService.new(current_user)
+    # github.repos_info.map do |repo|
+    #   Repos.new(repo)
+    # end
   end
 
   private
-  def self.githubservice(user)
-    GithubService.new(user)
+
+  def github
+    @github ||= GithubService.new(@user)
   end
+
+
 
 end

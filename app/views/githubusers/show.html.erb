@@ -1,8 +1,9 @@
 
 
 <div class="left-float-profile">
-    <div class="profile_image"><%=image_tag("#{@github_user.image}")%></div>
-    <div class="p-login-name"><%=@github_user.login %></div>
-    <div class="p-login-name"> Repositories <%=@github_user.user_repos(current_user).count %></div>
+    <div class="profile_image"><%=image_tag("#{@github_user.retrieve_image}")%></div>
+    <div class="p-login-name"><%=@github_user.user.login %></div>
+    <div class="Repos"> Repositories <%=@github_user.user_repos.count %></div>
+
 
 </div>
