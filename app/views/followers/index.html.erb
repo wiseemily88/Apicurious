@@ -1,0 +1,8 @@
+<div class="followering-list">
+  <ul>
+  <% @followering.each do |follower| %>
+    <li class="profile_login"><%= follower.login %></li>
+    <li class="profile_image"><%=image_tag("#{follower.image}")%></li>
+  <% end %>
+</ul>
+  </div>

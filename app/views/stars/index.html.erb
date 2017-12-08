@@ -1,0 +1,9 @@
+<div class="star-repo-details">
+  <ul>
+  <% @stars.each do |star| %>
+    <li class="name"><%= star.name %></li>
+    <li class="language"><%=star.language%></li>
+    <li class="updated_at"><%=star.updated_at%></li>
+  <% end %>
+</ul>
+  </div>

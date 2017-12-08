@@ -7,4 +7,6 @@ get '/logout', to: 'sessions#destory', as: :logout_path
 get '/profile', to: 'githubusers#show'
 get '/following', to: 'following#index'
 get '/repos', to: 'repos#index'
+get '/stars', to: 'stars#index'
+get '/followers', to: 'followers#index'
 end
