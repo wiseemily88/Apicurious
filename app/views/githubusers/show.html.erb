@@ -3,8 +3,10 @@
 <div class="left-float-profile">
     <div class="profile_image"><%=image_tag("#{@github_user.retrieve_image}")%></div>
     <div class="p-login-name"><%=@github_user.user.login %></div>
-    <div class="Repos"> Repositories <%=@github_user.user_repos.count %></div>
-    <div class="Stars"> Stars <%=@github_user.user_starred_repos.count %></div>
-    <div class="Following"> Followers <%=@github_user.user_follower.count %></div>
-    <div class="Followers"> Following <%=@github_user.user_following.count %></div>
+  </div>
+  <div class="body-nav-bar">
+    <div class="repos"> Repositories <%=@github_user.user_repos.count %></div>
+    <div class="stars"> Stars <%=@github_user.user_starred_repos.count %></div>
+    <div class="following"> Followers <%=@github_user.user_follower.count %></div>
+    <div class="followers"> Following <%=@github_user.user_following.count %></div>
 </div>
