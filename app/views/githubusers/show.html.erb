@@ -4,9 +4,13 @@
     <div class="profile_image"><%=image_tag("#{@github_user.retrieve_image}")%></div>
     <div class="p-login-name"><%=@github_user.user.login %></div>
   </div>
-  <div class="body-nav-bar">
-    <div class="repos"> Repositories <%=@github_user.user_repos.count %></div>
-    <div class="stars"> Stars <%=@github_user.user_starred_repos.count %></div>
-    <div class="following"> Followers <%=@github_user.user_follower.count %></div>
-    <div class="followers"> Following <%=@github_user.user_following.count %></div>
+
+<div class="body-nav-bar">
+  <ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="/">Home</a> <div class="repos">  </li>
+  <li role="presentation" class="repos"><a href="/repos">Repositories <%=@github_user.user_repos.count %></a></li>
+  <li role="presentation" class="stars"><a  href="/stars">Stars<%=@github_user.user_starred_repos.count %></a></li>
+  <li role="presentation" class="following"><a href="/followers">Followers <%=@github_user.user_follower.count %></a></li>
+  <li role="presentation" class="followers"><a href="/following">Following<%=@github_user.user_following.count %></a></li>
+  </ul>
 </div>
