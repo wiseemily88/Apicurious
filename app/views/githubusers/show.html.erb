@@ -5,8 +5,6 @@
     <div class="p-login-name"><%=@github_user.user.login %></div>
     <div class="Repos"> Repositories <%=@github_user.user_repos.count %></div>
     <div class="Stars"> Stars <%=@github_user.user_starred_repos.count %></div>
-    <div class="Following"> Repositories <%=@github_user.user_followers.count %></div>
-    <div class="Followers"> Repositories <%=@github_user.user_following.count %></div>
-
-
+    <div class="Following"> Followers <%=@github_user.user_follower.count %></div>
+    <div class="Followers"> Following <%=@github_user.user_following.count %></div>
 </div>
