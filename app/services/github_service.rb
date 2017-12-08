@@ -25,4 +25,14 @@ class GithubService
     attrs = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def followed_user_info
+    response = @conn.get("/users/#{@user.login}/followers")
+    attrs = JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def following_user_info
+    response = @conn.get("/users/#{@user.login}/following")
+    attrs = JSON.parse(response.body, symbolize_names: true)
+  end
+
 end

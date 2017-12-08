@@ -1,4 +1,5 @@
 require './app/models/repos'
+require './app/models/followers'
 
 class Githubuser
   attr_reader :user
@@ -22,7 +23,19 @@ class Githubuser
       Repos.new(repo)
     end
   end
-  
+
+  def user_follower
+    github.followed_user_info.map do |follower|
+      Followers.new(follower)
+    end
+  end
+
+  def user_following
+    github.following_user_info.map do |follower|
+      Followers.new(follower)
+    end
+  end
+
 
   private
 
