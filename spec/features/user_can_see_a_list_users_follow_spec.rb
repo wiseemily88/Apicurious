@@ -11,7 +11,7 @@ feature "user can view a summary feed of recent activity from users whom I follo
     visit '/following'
       within(".followers-list") do
         expect(page).to have_selector(".profile_image")
-        expect(page).to have_selector(".profile-description")
+    
       end
     end
   end

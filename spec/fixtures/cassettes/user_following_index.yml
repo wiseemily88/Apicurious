@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/wiseemily88/following?access_token=5a8d6c058a8b89c092e7b297a8b2e84ed83456f0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.12.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 08 Dec 2017 05:08:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4939'
+      X-Ratelimit-Reset:
+      - '1512709752'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - W/"b0ead00ceb537e991bb4714584d78016"
+      X-Oauth-Scopes:
+      - repo
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - b244c21fa74fed9e99d8
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Runtime-Rack:
+      - '0.036592'
+      X-Github-Request-Id:
+      - F5CF:27E1F:4603FD:A0DD4F:5A2A1E60
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"jmejia","id":73824,"avatar_url":"https://avatars0.githubusercontent.com/u/73824?v=4","gravatar_id":"","url":"https://api.github.com/users/jmejia","html_url":"https://github.com/jmejia","followers_url":"https://api.github.com/users/jmejia/followers","following_url":"https://api.github.com/users/jmejia/following{/other_user}","gists_url":"https://api.github.com/users/jmejia/gists{/gist_id}","starred_url":"https://api.github.com/users/jmejia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jmejia/subscriptions","organizations_url":"https://api.github.com/users/jmejia/orgs","repos_url":"https://api.github.com/users/jmejia/repos","events_url":"https://api.github.com/users/jmejia/events{/privacy}","received_events_url":"https://api.github.com/users/jmejia/received_events","type":"User","site_admin":false},{"login":"s-espinosa","id":10855116,"avatar_url":"https://avatars1.githubusercontent.com/u/10855116?v=4","gravatar_id":"","url":"https://api.github.com/users/s-espinosa","html_url":"https://github.com/s-espinosa","followers_url":"https://api.github.com/users/s-espinosa/followers","following_url":"https://api.github.com/users/s-espinosa/following{/other_user}","gists_url":"https://api.github.com/users/s-espinosa/gists{/gist_id}","starred_url":"https://api.github.com/users/s-espinosa/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/s-espinosa/subscriptions","organizations_url":"https://api.github.com/users/s-espinosa/orgs","repos_url":"https://api.github.com/users/s-espinosa/repos","events_url":"https://api.github.com/users/s-espinosa/events{/privacy}","received_events_url":"https://api.github.com/users/s-espinosa/received_events","type":"User","site_admin":false},{"login":"notmarkmiranda","id":15822772,"avatar_url":"https://avatars0.githubusercontent.com/u/15822772?v=4","gravatar_id":"","url":"https://api.github.com/users/notmarkmiranda","html_url":"https://github.com/notmarkmiranda","followers_url":"https://api.github.com/users/notmarkmiranda/followers","following_url":"https://api.github.com/users/notmarkmiranda/following{/other_user}","gists_url":"https://api.github.com/users/notmarkmiranda/gists{/gist_id}","starred_url":"https://api.github.com/users/notmarkmiranda/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/notmarkmiranda/subscriptions","organizations_url":"https://api.github.com/users/notmarkmiranda/orgs","repos_url":"https://api.github.com/users/notmarkmiranda/repos","events_url":"https://api.github.com/users/notmarkmiranda/events{/privacy}","received_events_url":"https://api.github.com/users/notmarkmiranda/received_events","type":"User","site_admin":false},{"login":"dionew1","id":22304676,"avatar_url":"https://avatars1.githubusercontent.com/u/22304676?v=4","gravatar_id":"","url":"https://api.github.com/users/dionew1","html_url":"https://github.com/dionew1","followers_url":"https://api.github.com/users/dionew1/followers","following_url":"https://api.github.com/users/dionew1/following{/other_user}","gists_url":"https://api.github.com/users/dionew1/gists{/gist_id}","starred_url":"https://api.github.com/users/dionew1/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/dionew1/subscriptions","organizations_url":"https://api.github.com/users/dionew1/orgs","repos_url":"https://api.github.com/users/dionew1/repos","events_url":"https://api.github.com/users/dionew1/events{/privacy}","received_events_url":"https://api.github.com/users/dionew1/received_events","type":"User","site_admin":false},{"login":"marshallhouston","id":24700836,"avatar_url":"https://avatars1.githubusercontent.com/u/24700836?v=4","gravatar_id":"","url":"https://api.github.com/users/marshallhouston","html_url":"https://github.com/marshallhouston","followers_url":"https://api.github.com/users/marshallhouston/followers","following_url":"https://api.github.com/users/marshallhouston/following{/other_user}","gists_url":"https://api.github.com/users/marshallhouston/gists{/gist_id}","starred_url":"https://api.github.com/users/marshallhouston/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/marshallhouston/subscriptions","organizations_url":"https://api.github.com/users/marshallhouston/orgs","repos_url":"https://api.github.com/users/marshallhouston/repos","events_url":"https://api.github.com/users/marshallhouston/events{/privacy}","received_events_url":"https://api.github.com/users/marshallhouston/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 05:08:48 GMT
+recorded_with: VCR 4.0.0
