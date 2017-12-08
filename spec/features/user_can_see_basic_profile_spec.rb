@@ -7,20 +7,19 @@ feature "user can see view basic account information" do
 
   allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
+  VCR.use_cassette("user_profile_view") do
+    visit '/profile'
+      within(".left-float-profile") do
+        expect(page).to have_selector(".profile_image")
+        expect(page).to have_selector(".p-login-name")
+      end
 
-  visit '/profile'
-
-
-    within(".left-float-profile") do
-      expect(page).to have_selector(".profile_image")
-      expect(page).to have_selector(".p-login-name")
-    end
-
-    within(".body-nav-bar") do
-      expect(page).to have_selector(".repos")
-      expect(page).to have_selector(".stars")
-      expect(page).to have_selector(".following")
-      expect(page).to have_selector(".followers")
+      within(".body-nav-bar") do
+        expect(page).to have_selector(".repos")
+        expect(page).to have_selector(".stars")
+        expect(page).to have_selector(".following")
+        expect(page).to have_selector(".followers")
+      end
     end
   end
 end

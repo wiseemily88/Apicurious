@@ -33,3 +33,7 @@ group :development, :test do
   gem 'faker'
   gem 'shoulda-matchers', '~> 3.1'
 end
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+end  
