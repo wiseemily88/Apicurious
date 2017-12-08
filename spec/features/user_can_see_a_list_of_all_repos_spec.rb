@@ -12,8 +12,7 @@ feature "user can view a list of all repos" do
       within(".repo-details") do
         expect(page).to have_selector(".name")
         expect(page).to have_selector(".language")
-        expect(page).to have_selector(".created_at")
-
+        expect(page).to have_selector(".updated_at")
       end
     end
   end

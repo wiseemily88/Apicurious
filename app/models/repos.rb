@@ -1,4 +1,5 @@
 class Repos
+  attr_reader :name, :language, :updated_at
 
   def initialize(attrs ={})
     @name = attrs[:name]
