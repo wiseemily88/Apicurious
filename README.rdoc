@@ -1,28 +1,9 @@
-== README
+## Apicurious
+This a solo project to practice consuming external APIS. It re-constructs a simplified version of Github's existing UI using their own API.  TDD was used to drive all layers of development.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It is a Ruby on Rails application using Ruby 2.4.1, Rails 5 with Active Record, and a PostgreSQL database.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Features
+User can authenticate using Omniauth
+User can view basic information about his/her account
+User can view a list of his/her repositories

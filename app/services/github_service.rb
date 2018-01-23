@@ -3,10 +3,10 @@ class GithubService
 
   def initialize(user)
     @user = user
-    @conn = Faraday.new(url: "https://api.github.com") do |faraday|
-      faraday.params['access_token'] = @user.token
-      faraday.adapter  Faraday.default_adapter
-    end
+    # @conn = Faraday.new(url: "https://api.github.com") do |faraday|
+    #   faraday.params['access_token'] = @user.token
+    #   faraday.adapter  Faraday.default_adapter
+    # end
 
   end
 
@@ -33,6 +33,17 @@ class GithubService
   def following_user_info
     response = @conn.get("/users/#{@user.login}/following")
     attrs = JSON.parse(response.body, symbolize_names: true)
+  end
+
+
+  private
+  attr_reader :current_user
+  
+  def connection
+    @conn ||= Faraday.new(url: "https://api.github.com") do |faraday|
+      faraday.params['access_token'] = @user.token
+      faraday.adapter  Faraday.default_adapter
+    end
   end
 
 end
